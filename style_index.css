@@ -1,0 +1,31 @@
+/* ── BONUS : Page d'accueil ─────────────────────────────── */
+
+.accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  gap: 20px;
+}
+
+.bouton-accueil {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+} 
+
+.bouton-accueil:hover {
+  opacity: 0.85;
+}
+
+/* Enlève le soulignement bleu par défaut du lien */
+.accueil a {
+  text-decoration: none;
+}

@@ -1,0 +1,186 @@
+/* style.css */
+
+
+/* ── PARTIE 2 : Reset Box Model ─────────────────────────── */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* ── PARTIE 1 : Styles généraux de la page ──────────────── */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+/* ── PARTIE 1 : Conteneur principal du chat ─────────────── */
+
+.chat-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+/* ── PARTIE 2 : Zone des messages ───────────────────────── */
+
+#chat-messages {
+  padding: 10px;
+}
+
+
+/* ── PARTIE 2 : Styles communs à toutes les bulles ──────── */
+
+.message {
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  max-width: 75%;
+  line-height: 1.5;
+  clear: both;
+}
+
+.message p {
+  margin: 0;
+}
+
+
+/* ── PARTIE 2 : Bulles utilisateur (droite) ─────────────── */
+
+.user-message {
+  background-color: #007bff;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: 0;
+  border-bottom-right-radius: 5px;
+}
+
+
+/* ── PARTIE 2 : Bulles de l'IA (gauche) ─────────────────── */
+
+.assistant-message {
+  background-color: #e9e9eb;
+  color: #333333;
+  margin-right: auto;
+  margin-left: 0;
+  border-bottom-left-radius: 5px;
+}
+
+
+/* ── PARTIE 1 & 2 : Zone de saisie ──────────────────────── */
+
+#chat-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#user-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+#user-input::placeholder {
+  color: #999999;
+}
+
+.bouton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-out, transform 0.1s ease;
+}
+
+.bouton:hover {
+  background-color: #0056b3;
+}
+
+.bouton:active {
+  transform: scale(0.98);
+}
+
+
+/* ── PARTIE 3 : Responsive Design ───────────────────────── */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .chat-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  #user-input,
+  .bouton {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+  .chat-container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .message {
+    max-width: 90%;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 15px;
+  }
+  #chat-form {
+    flex-direction: column;
+    padding: 8px;
+  }
+  #user-input {
+    margin-right: 0;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  .bouton {
+    width: 100%;
+  }
+}
+
+
+
